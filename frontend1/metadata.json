@@ -1,0 +1,5 @@
+{
+  "name": "Real-Time Ambulance Tracking System",
+  "description": "A professional frontend for a real-time ambulance tracking system, featuring separate dashboards for drivers, nurses, and hospital staff with live updates.",
+  "requestFramePermissions": []
+}
