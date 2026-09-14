@@ -98,3 +98,86 @@ Send trip information
             |
             v
 Hospital receives update
+Enter patient information
+            |
+            v
+Enter clinical notes
+            |
+            v
+Submit assessment
+            |
+            v
+Rule-based triage processing
+            |
+            v
+Severity and requirement calculated
+            |
+            v
+Store assessment in MongoDB
+            |
+            v
+Send Socket.IO notification
+            |
+            v
+Hospital receives update
+
+Enter hospital code
+            |
+            v
+Join hospital Socket.IO room
+            |
+            v
+Receive driver update
+            |
+            v
+Receive nurse update
+            |
+            v
+Display transit and patient information
+
+real-time-ambulance/
+|
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   ├── seedhospital.js
+│   ├── assignHospitalCodes.js
+│   ├── printHospitals.js
+│   ├── printOneHospital.js
+│   |
+│   ├── models/
+│   │   ├── hospital.js
+│   │   ├── trip.js
+│   │   ├── DriverUpdate.js
+│   │   └── NurseUpdate.js
+│   |
+│   └── routes/
+│       └── routes.js
+|
+├── frontend/
+│   ├── index.html
+│   ├── index.tsx
+│   ├── App.tsx
+│   ├── types.ts
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── vite.config.ts
+│   |
+│   ├── components/
+│   │   ├── DriverDashboard.tsx
+│   │   ├── NurseDashboard.tsx
+│   │   ├── HospitalDashboard.tsx
+│   │   ├── DriverUpdateCard.tsx
+│   │   └── NurseUpdateCard.tsx
+│   |
+│   └── src/
+│       ├── index.css
+│       ├── pages/
+│       │   ├── RouteMapPage.tsx
+│       │   └── DriverNavigation.tsx
+│       |
+│       └── services/
+│           ├── socket.ts
+│           └── driverLocation.ts
+|
+└── README.md
